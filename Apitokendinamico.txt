@@ -1,0 +1,18 @@
+/**En el archivo principal del back-end el primero que carga el proyecto, ahi se agregara esta parte de codigo para crear un api toke dinámico*/
+
+function random() {
+    return Math.random().toString(36).substring(2); // Eliminar `0.`
+};
+
+function token() {
+    return random() + '-' + random() + '-' + random(); // Para hacer el token más largo
+};
+
+process.env.APP_API_KEY = token() ;
+console.log(process.env.APP_API_KEY);
+
+setInterval(() => {
+    process.env.APP_API_KEY = token();
+    console.log(token());
+}, 1800000);
+
