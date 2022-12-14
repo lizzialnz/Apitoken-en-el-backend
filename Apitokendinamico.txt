@@ -14,5 +14,4 @@ console.log(process.env.APP_API_KEY);
 setInterval(() => {
     process.env.APP_API_KEY = token();
     console.log(token());
-}, 1800000);
-
+}, 1800000); /**el intervalo de tiempo indica en milisegundos que cada media hora se generará un nuevo apitoken*/
