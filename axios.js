@@ -1,4 +1,7 @@
-/**Aquí se recupera el token api del back-end mediante una peticion get que ya existe en el back*/
+/**Aquí se recupera el token api del back-end mediante una peticion get que ya existe en el back
+este archivo va en el Front-End
+para hacer peticiones al back ahora solo debe exportar este archivo y utilizar el axiosPublic.get o post por ejemplo.
+lo mismo si desea crear axiosPrivate*/
 import axios from 'axios'
 
 const axiosPublic = axios.create();
