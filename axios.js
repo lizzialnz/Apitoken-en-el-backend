@@ -18,3 +18,21 @@ axiosPublic.defaults.headers.common['cache-control'] = 'no-cache'
 export {
     axiosPublic
 }
+
+/**esta parte de codigo va en otro archivo, pertece al login lo agrego aqui solo como ejemplo de que al tener el apitopken incluido en el axiosPublic
+no es necesario agregar el apitoken en la peticion*/
+import { axiosPublic } from './axios';
+
+const postLogin = (user, password) => {
+  console.log("loginapi: successfull");
+  return axiosPublic.post(
+    '/auth/login',
+    {
+      user,
+      password
+    }
+  )
+
+};
+
+export default postLogin;
